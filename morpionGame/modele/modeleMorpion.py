@@ -4,7 +4,7 @@ class MorpionTable:
 
     def updateCell(self, rowNum, colNum, element_to_insert):
         self.arryMorpion[rowNum][colNum] = element_to_insert
-
+"""le faire nen 50 ligne de code"""
 
 """
 Class of gamer
@@ -15,7 +15,10 @@ game : the instance of the current game
 """
 
 
-class Gamer(MorpionTable):
+class Gamer:
+    """Edit the code for the correct implementation for object to be passed through"""
+    game = MorpionTable
+
 
     def __init__(self, namegamer: str, pawn: str, game: MorpionTable):
         self.nameGamer = namegamer
@@ -25,7 +28,6 @@ class Gamer(MorpionTable):
     """
     method allow a gamer to position a pawn on the table
     """
-
     def putYourPawn(self, row: int, column: int):
         self.morpiongame.updateCell(row, column, self.pawn)
 
